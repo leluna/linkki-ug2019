@@ -3,6 +3,11 @@ package de.faktorzehn.usergroup.togglebutton;
 import org.linkki.core.ui.element.annotation.UICheckBox;
 import org.linkki.core.ui.element.annotation.UILabel;
 
+import com.vaadin.icons.VaadinIcons;
+import com.vaadin.server.Resource;
+
+import de.faktorzehn.usergroup.togglebutton.annotations.BindIcon;
+
 public class ContactRowPmo {
 
 	private String kind;
@@ -25,13 +30,18 @@ public class ContactRowPmo {
 		return details;
 	}
 
-	@UICheckBox(position = 30, caption = "", label = "Primary")
+	@BindIcon
+	@UICheckBox(position = 30, caption = "")
 	public boolean isPrimary() {
 		return primary;
 	}
 
 	public void setPrimary(boolean primary) {
 		this.primary = primary;
+	}
+
+	public Resource getPrimaryIcon() {
+		return primary ? VaadinIcons.FLAG : VaadinIcons.FLAG_O;
 	}
 
 }
