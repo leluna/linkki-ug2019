@@ -20,5 +20,4 @@ public class IconAspectDefinition extends ModelToUiAspectDefinition<Resource> {
 	public Consumer<Resource> createComponentValueSetter(ComponentWrapper componentWrapper) {
 		return icon -> ((Component) componentWrapper.getComponent()).setIcon(icon);
 	}
-
 }
