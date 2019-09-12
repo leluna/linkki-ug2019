@@ -1,0 +1,21 @@
+$v-shadow: false !default;
+
+@import "linkki.scss";
+@import "../valo/valo.scss";
+
+.ug2019 {
+
+  @include valo;
+  @include linkki;
+
+  #ContactTablePmo {
+    max-width: 800px;
+  }
+
+  .flex-view { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5em;
+  }
+}
